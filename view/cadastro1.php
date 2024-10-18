@@ -20,27 +20,27 @@
         <br>
         <form action="controller/cadastrar_endereco.php" method="POST">
             <div class="floating-label-container">
-                <input id="cep" type="text" name="cep" placeholder=" " />
+                <input id="cep" type="text" name="cep" placeholder=" " required/>
                 <label for="cep">CEP</label>
             </div>
             <div class="floating-label-container">
-                <input id="estado" type="text" name="estado" placeholder=" " />
+                <input id="estado" type="text" name="estado" placeholder=" " required/>
                 <label for="estado">Estado</label>
             </div>
             <div class="floating-label-container">
-                <input id="cidade" type="text" name="cidade" placeholder=" " />
+                <input id="cidade" type="text" name="cidade" placeholder=" " required/>
                 <label for="cidade">Cidade</label>
             </div>
             <div class="floating-label-container">
-                <input id="bairro" type="text" name="bairro" placeholder=" " />
+                <input id="bairro" type="text" name="bairro" placeholder=" " required/>
                 <label for="bairro">Bairro</label>
             </div>
             <div class="floating-label-container">
-                <input id="rua" type="text" name="rua" placeholder=" " />
+                <input id="rua" type="text" name="rua" placeholder=" " required/>
                 <label for="rua">Rua</label>
             </div>
             <div class="floating-label-container">
-                <input id="pais" type="text" name="pais" placeholder=" " />
+                <input id="pais" type="text" name="pais" placeholder=" " required/>
                 <label for="pais">País</label>
             </div>
             <br>

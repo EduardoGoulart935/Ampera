@@ -19,13 +19,9 @@ $ins2->bindParam(':nome', $nome);
 $ins2->bindParam(':senha', $senha);
 
 #$db->beginTransaction();
-if($login == '' || $nome == '' || $senha == ''){
-    echo "<script> alert 'Os campos não podem estar vazios' </script>";
-    header("Location: /Ampera/cadastro");
-}else{
-    $res2 = $ins2->execute();
-    $_SESSION['id_last_usuario'] = $pdo->lastInsertId();
-}
+$res2 = $ins2->execute();
+$_SESSION['id_last_usuario'] = $pdo->lastInsertId();
+
 
 $sql = "INSERT INTO perfil (nome, email, contato, cpf_cnpj, data_nasc, id_endereco, id_usuarios) VALUES (:nome, :email, :contato, :cpf_cnpj, :data_nasc, null, :id_usuario)";
 $ins = $pdo->prepare($sql);
@@ -36,14 +32,9 @@ $ins->bindParam(':contato', $contato);
 $ins->bindParam(':cpf_cnpj', $cpf_cnpj);
 $ins->bindParam(':data_nasc', $data_nasc);
 $ins->bindParam(':id_usuario', $_SESSION['id_last_usuario']);
-
-if($nome == '' || $email == '' || $contato == '' || $cpf_cnpj == '' || $data_nasc == ''){
-    echo "<script> alert 'Os campos não podem estar vazios' </script>";
-    header("Location: /Ampera/cadastro");
-}else{
 $res = $ins->execute();
 #$db->commit();
-}
+
 
 if ($ins === false || $ins2 === false) {
     die('Prepare failed: ' . htmlspecialchars($pdo->errorInfo()[2]));

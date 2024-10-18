@@ -24,31 +24,31 @@
         <br><br>
         <form action="controller/cadastrar.php" method="POST" class="form_register" id="Formulario">
             <div class="floating-label-container">
-                <input type="text" name="login" placeholder=" " />
+                <input type="text" name="login" placeholder=" " required/>
                 <label for="login">Login</label>
             </div>
             <div class="floating-label-container">
-                <input type="text" name="nome" placeholder=" " />
+                <input type="text" name="nome" placeholder=" " required/>
                 <label for="nome">Nome</label>
             </div>
             <div class="floating-label-container">
-                <input type="email" name="email" placeholder=" " />
+                <input type="email" name="email" placeholder=" " required/>
                 <label for="email">Email</label>
             </div>
             <div class="floating-label-container">
-                <input type="text" name="contato" id="contato" placeholder=" " />
+                <input type="text" name="contato" id="contato" placeholder=" " required/>
                 <label for="contato">Contato</label>
             </div>
             <div class="floating-label-container">
-                <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder=" " />
+                <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder=" " required/>
                 <label for="cpf_cnpj">CPF/CNPJ</label>
             </div>
             <div class="floating-label-container">
-                <input type="date" name="data_nasc" placeholder=" " />
+                <input type="date" name="data_nasc" placeholder=" " required/>
                 <label for="data_nascimento">Data de Nascimento</label>
             </div>
             <div class="floating-label-container">
-                <input type="password" name="senha" placeholder=" " />
+                <input type="password" name="senha" placeholder=" " required/>
                 <label for="senha">Senha</label>
             </div>
 
