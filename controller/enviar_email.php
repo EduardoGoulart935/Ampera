@@ -32,13 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'eduardogoulart935@gmail.com';
-                $mail->Password = 'hgnb jbwf cgog kmal'; 
+                $mail->Username = 'seu emial SMTP';
+                $mail->Password = 'sua senha SMTP'; 
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
                 // Configurações do e-mail
-                $mail->setFrom('eduardogoulart935@gmail.com', 'Eduardo');
+                $mail->setFrom('seu emial SMTP', 'Eduardo');
                 $mail->addAddress($email, 'Usuário');
                 $mail->Subject = 'Recuperacao de Senha';
                 $mail->Body = "Olá, \n\nClique no link abaixo para redefinir sua senha:\n$link\n\nEste link é válido por 1 hora.";
